@@ -1,0 +1,197 @@
+@use "../util" as u;
+
+.leistungen{
+    width: 100%;
+    padding-top: 5rem;
+}
+
+.leistungen__hero-image{
+    height: 30vh;
+    width: 100%;
+    background: linear-gradient(
+                    to right, 
+                    rgba(u.$quaternary-color, .5), 
+                    rgba(u.$quaternary-color, .5)),
+                url(../../dist/img/pflaster.png);
+        background-size: cover;
+        background-position: top;
+}
+
+.leistungen__hero{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 .5rem;
+    
+    .hero__headline{
+        text-align: center;
+        margin-bottom: .5rem;
+    
+        &--bold{
+            font-weight: 700;
+        }
+    }
+    
+    .hero__subheading{
+        text-align: center;
+        margin-bottom: .5rem;
+    }
+}
+
+.leistungen__services{
+    padding: 0 .5rem;
+    margin-bottom: 2rem;
+    
+    .services__headline{
+        margin: 1rem 0;
+        font-size: 3rem;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .services__container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;
+        width: 100%;
+
+        .service__title{
+            width: 100%;
+            text-align: center;
+            text-transform: uppercase;
+            border-bottom: 1px solid u.$tertiary-color;
+            margin-bottom: .5rem;
+        }
+
+        .service__description{
+            text-align: center;
+            width: 100%;
+            padding: 0 2rem;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+.leistungen__kontaktfeld{
+
+    padding: 0 .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .kontaktfeld__headline{
+        margin: .5rem 0;
+        font-weight: 400;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .kontaktfeld__subheading{
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 200;
+        margin-bottom: .5rem;
+    }
+
+    .kontaktfeld__button{
+        color: u.$secondary-color;
+        border: 1px solid u.$tertiary-color;
+        font-size: 1.25rem;
+        font-weight: 700;
+        padding: .5rem 1rem;
+        padding-top: .8rem;
+
+        &:hover{
+            background: u.$secondary-color;
+            color: u.$primary-color;
+            border: 1px solid u.$secondary-color;
+        }
+    }
+}
+
+.leistungen__galeriefeld{
+    margin: 2rem 0;
+    padding: 0 .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .galeriefeld__headline{
+        margin: .5rem 0;
+        font-weight: 400;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .galeriefeld__subheading{
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 200;
+        margin-bottom: .5rem;
+    }
+
+    .galeriefeld__button{
+        color: u.$secondary-color;
+        border: 1px solid u.$secondary-color;
+        font-size: 1.25rem;
+        font-weight: 700;
+        padding: .5rem 1rem;
+        padding-top: .8rem;
+
+        &:hover{
+            background: u.$secondary-color;
+            color: u.$primary-color;
+        }
+    }
+}
+
+@include u.breakpoint(medium){
+    .leistungen__hero,
+    .leistungen__services,
+    .leistungen__kontaktfeld,
+    .leistungen__galeriefeld{
+        padding: 0 5rem;
+    }
+
+    .leistungen__services{
+    
+        .services__container{
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 5rem;
+        }
+    }
+}
+
+@include u.breakpoint(large){
+    .leistungen__hero,
+    .leistungen__services,
+    .leistungen__kontaktfeld,
+    .leistungen__galeriefeld{
+        padding: 0 10rem;
+    }
+
+    .leistungen__hero{
+
+        .hero__headline,
+        .hero__headline--bold{
+            font-size: 3rem;
+        }
+        
+        .hero__subheading{
+            font-size: 2rem;
+        }
+    }
+}
+
+@include u.breakpoint(xlarge){
+    
+    .leistungen__services{
+    
+        .services__container{
+            grid-template-columns: repeat(4, 1fr);
+            grid-column-gap: 2rem;
+        }
+    }
+}
