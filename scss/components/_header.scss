@@ -1,0 +1,142 @@
+@use "../util/" as u;
+
+header{
+    position: fixed;
+    width: 100%;
+    height: 5rem;
+    background: u.$quaternary-color;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 9999;
+    box-shadow: 0px 10px 20px rgba(u.$secondary-color, .2);
+}
+
+.header__name{
+    color: u.$secondary-color;
+    font-weight: 100;
+    line-height: 1.5rem;
+    padding-left: .5rem;
+
+    &--bold{
+        font-weight: 700;
+    }
+}
+
+.menu-btn{
+    margin-right: .5rem;
+    height: 17px;
+    width: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+
+    &__line1,
+    &__line2,
+    &__line3{
+        width: 28px;
+        height: 3px;
+        margin: 3px 0;
+        border: .5px solid u.$secondary-color;
+    }
+
+    &__line2.open{
+            border: none;
+    }
+
+    &__line1.open{
+                transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    &__line3.open{
+                width: 28px;
+                transform: rotate(-45deg) translate(4px, -5px);
+    }
+}
+
+.nav{
+    position: fixed;
+    top: 4rem;
+    left: 0;
+    width: 100vw;
+    visibility: hidden;
+    z-index: 1;
+
+    &.open{
+        visibility: visible;
+    }
+
+    .menu-nav{
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+        height: calc(100vh - 5rem);
+        overflow: hidden;
+        background: u.$quaternary-color;
+        list-style-type: none;
+        transform: translateY(-100%);
+        padding-inline-start: 0;
+
+        &.open{
+            transform: translateY(0);
+        }
+
+        &__item{
+            transform: translateX(100vh);
+
+            &.open{
+                transform: translateX(0);
+            }
+
+            &.active > a{
+                color: u.$tertiary-color;
+            }
+        }
+
+        &__link{
+            display: inline-block;
+            font-size: 2rem;
+            text-transform: uppercase;
+            padding: 2rem 0;
+            font-weight: 400;
+            color: u.$secondary-color;
+            
+            &:hover{
+                color: u.$tertiary-color;
+            }
+        }
+    }
+}
+
+@include u.breakpoint(medium) {
+    .menu-btn{
+        visibility: hidden;
+    }
+
+    .nav{
+        visibility: visible;
+        height: 5rem;
+
+        .menu-nav{
+            display: block;
+            width: 80%;
+            height: 100%;
+            background: transparent;
+            text-align: right;
+            margin-left: 20%;
+
+            &__item{
+                display: inline;
+                padding-right: 1.5rem;
+            }
+
+            &__link{
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+
