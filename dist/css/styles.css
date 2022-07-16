@@ -558,4 +558,115 @@ header {
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 2rem;
   }
+}
+.galerie {
+  width: 100%;
+  padding-top: 5rem;
+}
+
+.galerie__hero-image {
+  height: 20vh;
+  width: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../../dist/img/pflaster.png);
+  background-size: cover;
+  background-position: top;
+  padding: 0 0.5rem;
+}
+
+.galerie__hero {
+  height: 100%;
+  width: 100%;
+  padding: 0 0.5rem;
+}
+.galerie__hero .hero__headline {
+  text-align: center;
+}
+
+.galerie__container {
+  padding: 0 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 0.5rem;
+  margin: 1rem 0;
+}
+.galerie__container .galerie__bild {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  left: 0;
+  top: 0;
+  position: relative;
+  opacity: 0.6;
+}
+.galerie__container .galerie__bild:hover {
+  width: 140%;
+  height: 140%;
+  opacity: 1;
+  z-index: 1;
+  top: -20%;
+  left: -20%;
+}
+
+.galerie__kontaktfeld {
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.galerie__kontaktfeld .kontaktfeld__headline {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+}
+.galerie__kontaktfeld .kontaktfeld__subheading {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 200;
+  margin-bottom: 0.5rem;
+}
+.galerie__kontaktfeld .kontaktfeld__button {
+  color: #002F6B;
+  border: 1px solid #D40000;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  padding-top: 0.8rem;
+}
+.galerie__kontaktfeld .kontaktfeld__button:hover {
+  background: #002F6B;
+  color: #EFF6FF;
+  border: 1px solid #002F6B;
+}
+
+@media (min-width: 43.75em) {
+  .galerie__hero,
+.galerie__container,
+.galerie__kontaktfeld {
+    padding: 0 5rem;
+  }
+  .galerie__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 56.25em) {
+  .galerie__hero,
+.galerie__container,
+.galerie__kontaktfeld {
+    padding: 0 10rem;
+  }
+  .galerie__hero .hero__headline {
+    font-size: 3rem;
+  }
+  .galerie__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 90em) {
+  .galerie__container {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }/*# sourceMappingURL=styles.css.map */
