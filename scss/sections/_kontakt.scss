@@ -1,0 +1,83 @@
+@use "../util" as u;
+
+.kontakt{
+    width: 100%;
+    padding-top: 5rem;
+}
+
+.kontakt__hero-image{
+    height: calc(100vh - 5rem);
+    width: 100%;
+    background: linear-gradient(
+                    to right, 
+                    rgba(u.$quaternary-color, .5), 
+                    rgba(u.$quaternary-color, .5)),
+                url(../../dist/img/pflaster.png);
+    background-size: cover;
+    background-position: top;
+}
+
+.kontakt__hero{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 .5rem;
+
+    .kontakt__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .kontakt__headline{
+        margin-bottom: .5rem;
+        text-align: center;
+        width: 100%;
+        border-bottom: 1px solid u.$secondary-color;
+        
+        &--bold{
+            font-weight: 700;
+        }
+    }
+    
+    .kontakt__info{
+        margin-bottom: 3rem;
+        color: u.$secondary-color;
+        font-size: 1.25rem;
+        font-weight: 400;
+        text-transform: uppercase;
+
+        &:hover{
+            color: u.$tertiary-color;
+        }
+    }
+}
+
+@include u.breakpoint(medium){
+    .kontakt__hero{
+        padding: 0 5rem;
+    }
+}
+
+@include u.breakpoint(large){
+    .kontakt__hero{
+        padding: 0 10rem;
+    }
+
+    .leistungen__hero{
+
+        .kontakt__headline,
+        .kontakt__headline--bold{
+            font-size: 3rem;
+        }
+        
+        .kontakt__info{
+            font-size: 2rem;
+        }
+    }
+}
