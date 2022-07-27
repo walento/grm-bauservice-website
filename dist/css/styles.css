@@ -728,11 +728,95 @@ header {
   .kontakt__hero {
     padding: 0 10rem;
   }
-  .leistungen__hero .kontakt__headline,
-.leistungen__hero .kontakt__headline--bold {
+  .kontakt__hero .kontakt__headline,
+.kontakt__hero .kontakt__headline--bold {
     font-size: 3rem;
   }
-  .leistungen__hero .kontakt__info {
+  .kontakt__hero .kontakt__info {
     font-size: 2rem;
+  }
+}
+.impressum {
+  width: 100%;
+  padding-top: 5rem;
+}
+
+.impressum__hero-image {
+  height: calc(100vh - 5rem);
+  width: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../img/pflaster.png);
+  background-size: cover;
+  background-position: top;
+}
+
+.impressum__hero {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.5rem;
+}
+.impressum__hero .impressum__headline {
+  margin-bottom: 0.5rem;
+  text-align: center;
+  width: 100%;
+  border-bottom: 1px solid #002F6B;
+}
+
+@media (min-width: 43.75em) {
+  .impressum__hero {
+    padding: 0 5rem;
+  }
+}
+@media (min-width: 56.25em) {
+  .impressum__hero {
+    padding: 0 10rem;
+  }
+  .impressum__hero .impressum__headline {
+    font-size: 3rem;
+  }
+}
+.datenschutz {
+  width: 100%;
+  padding-top: 5rem;
+}
+
+.datenschutz__hero-image {
+  height: calc(100vh - 5rem);
+  width: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../img/pflaster.png);
+  background-size: cover;
+  background-position: top;
+}
+
+.datenschutz__hero {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.5rem;
+}
+.datenschutz__hero .datenschutz__headline {
+  margin-bottom: 0.5rem;
+  text-align: center;
+  width: 100%;
+  border-bottom: 1px solid #002F6B;
+}
+
+@media (min-width: 43.75em) {
+  .datenschutz__hero {
+    padding: 0 5rem;
+  }
+}
+@media (min-width: 56.25em) {
+  .datenschutz__hero {
+    padding: 0 10rem;
+  }
+  .datenschutz__hero .datenschutz__headline {
+    font-size: 3rem;
   }
 }/*# sourceMappingURL=styles.css.map */

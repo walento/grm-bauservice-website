@@ -1,11 +1,11 @@
 @use "../util" as u;
 
-.kontakt{
+.datenschutz{
     width: 100%;
     padding-top: 5rem;
 }
 
-.kontakt__hero-image{
+.datenschutz__hero-image{
     height: calc(100vh - 5rem);
     width: 100%;
     background: linear-gradient(
@@ -17,7 +17,7 @@
     background-position: top;
 }
 
-.kontakt__hero{
+.datenschutz__hero{
     height: 100%;
     width: 100%;
     display: flex;
@@ -25,59 +25,30 @@
     align-items: center;
     justify-content: center;
     padding: 0 .5rem;
-
-    .kontakt__container{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-    }
     
-    .kontakt__headline{
+    .datenschutz__headline{
         margin-bottom: .5rem;
         text-align: center;
         width: 100%;
         border-bottom: 1px solid u.$secondary-color;
-        
-        &--bold{
-            font-weight: 700;
-        }
-    }
-    
-    .kontakt__info{
-        margin-bottom: 3rem;
-        color: u.$secondary-color;
-        font-size: 1.25rem;
-        font-weight: 400;
-        text-transform: uppercase;
-
-        &:hover{
-            color: u.$tertiary-color;
-        }
     }
 }
 
 @include u.breakpoint(medium){
-    .kontakt__hero{
+    .datenschutz__hero{
         padding: 0 5rem;
     }
 }
 
 @include u.breakpoint(large){
-    .kontakt__hero{
+    .datenschutz__hero{
         padding: 0 10rem;
     }
 
-    .kontakt__hero{
+    .datenschutz__hero{
 
-        .kontakt__headline,
-        .kontakt__headline--bold{
+        .datenschutz__headline{
             font-size: 3rem;
-        }
-        
-        .kontakt__info{
-            font-size: 2rem;
         }
     }
 }
