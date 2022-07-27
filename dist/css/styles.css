@@ -250,7 +250,7 @@ header {
 .home__hero-image {
   height: 50vh;
   width: 100%;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(/dist/img/pflaster.png);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../dist/img/pflaster.png);
   background-size: cover;
   background-position: top;
   display: flex;
